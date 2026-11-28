@@ -1,0 +1,13 @@
+# Build products (boot images, AVB reports)
+/out/
+
+# Staged vendor firmware (fetch-firmware.py; never commit blobs)
+/firmware/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Editor/OS noise
+*.swp
+.DS_Store

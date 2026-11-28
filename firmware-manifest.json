@@ -1,0 +1,61 @@
+{
+  "tested_build": "1128-0004",
+  "note": "Hashes of the firmware the board was validated with. A different factory release may ship different blobs; fetch-firmware.py warns on a mismatch instead of silently mixing versions (--strict turns the warning into an error). gen80000_zap.mbn differs between the 12.0.7 and 12.7 dumps and both boot, because mainline does not load the zap shader on this platform.",
+  "files": {
+    "video-fw/vpu30_2v.mbn": {
+      "sha256": "6dafae651b3410254181d79d641a2f3490c899da37963ca9d659919e2f2e72ee",
+      "size": 2331336,
+      "source": "vendor.img:/firmware/vpu30_2v.mbn"
+    },
+    "gpu-fw/gen80000_sqe.fw": {
+      "sha256": "30ee3301534f95799d4afaf73864f3c369baa5a5dea8481e7f0cb8cc941f396c",
+      "size": 111476,
+      "source": "vendor.img:/firmware/gen80000_sqe.fw"
+    },
+    "gpu-fw/gen80000_aqe.fw": {
+      "sha256": "67562ad5baae3a133c92a6e48a9d1b1a9a867fe2f85b49324e244e963f3b89c5",
+      "size": 25044,
+      "source": "vendor.img:/firmware/gen80000_aqe.fw"
+    },
+    "gpu-fw/gen80600_gmu.bin": {
+      "sha256": "75b3282a40e5411a1c154f698b923a916d1a6c8336d0ada677feabb15155a80e",
+      "size": 88964,
+      "source": "vendor.img:/firmware/gen80600_gmu.bin"
+    },
+    "gpu-fw/gen80000_zap.mbn": {
+      "sha256": "818443ad80ad68b4b5f95d27812b5a8b61e81ddec7d51bb7667d712084d92872",
+      "size": 12088,
+      "source": "vendor.img:/firmware/gen80000_zap.mbn (12.7 dump; tested on 1128-0004. The 12.0.7 dump shipped a different build that also booted, but mainline does not enable the zap shader here: it uses SECVID_TRUST_CNTL instead, so the file is inert.)"
+    },
+    "touch-fw/firmware.img": {
+      "sha256": "d7d36f12f8180620edd1a45695ebf864abe4a04c5868468f94fe9e89bcaab167",
+      "size": 226812,
+      "source": "vendor.img:/firmware/synaptics/firmware.img"
+    },
+    "wifi-fw/amss20.bin": {
+      "sha256": "43f636ec6e9b752ab1063398fcdee0f15ccf5fdc0d5b1010365e9d85a53304ae",
+      "size": 6418496,
+      "source": "modem.img:/image/kiwi/amss20.bin"
+    },
+    "wifi-fw/phy_ucode20.elf": {
+      "sha256": "7f269130c3d0a209e5c51f54c3bf40062e582d72242bc99dc73d45f1475ca270",
+      "size": 299660,
+      "source": "modem.img:/image/kiwi/phy_ucode20.elf"
+    },
+    "wifi-fw/bdwlan_m2582.elf": {
+      "sha256": "e4d39881120a455f44ea67c63ab66cf91d63917106cec35c5a9896298bcdbabd",
+      "size": 88836,
+      "source": "modem.img:/image/kiwi/bdwlan_m2582.elf"
+    },
+    "wifi-fw/board-2.bin": {
+      "sha256": "1abee7132dbccb523cca44a8de4e8968aa7bf5a5fcc032c338f687f94ea5bf4e",
+      "size": 2253964,
+      "source": "linux-firmware ath12k WCN7850 hw2.0 board-2.bin (not on the modem partition)"
+    },
+    "wifi-fw/regdb.bin": {
+      "sha256": "e92b6a82fd2a57e1774e68a55c3aed4faf29cdd7d43b956cd7f6c5f1ef6877eb",
+      "size": 24278,
+      "source": "modem.img:/image/kiwi/regdb.bin"
+    }
+  }
+}
